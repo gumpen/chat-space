@@ -142,5 +142,9 @@ html {
   width: 300px;
   background-color: #2f3e51;
   float: left; }
+  .sidebar .sidebar__user {
+    height: 100px;
+    width: 100%;
+    background-color: #253141; }
 
 /*# sourceMappingURL=application.css.map */
