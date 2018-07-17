@@ -9,7 +9,19 @@
     background-color: #253141;
   }
   .sidebar__groups {
-
+    .sidebar__groups__content {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      .sidebar__groups__content__name {
+        font-size: 15px;
+        color: #fff;
+      }
+      .sidebar__groups__content__chat {
+        font-size: 11px;
+        color: #fff;
+      }
+    }
   }
 
 }
