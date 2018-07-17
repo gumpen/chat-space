@@ -1,3 +1,6 @@
+/*
+ *= require font-awesome
+ */
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -143,9 +146,20 @@ html {
   background-color: #2f3e51;
   float: left; }
   .sidebar .sidebar__user {
-    height: 82px;
+    height: 100px;
     width: 100%;
     background-color: #253141; }
+    .sidebar .sidebar__user .sidebar__user__content {
+      width: 100%;
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box; }
+      .sidebar .sidebar__user .sidebar__user__content .sidebar__user__content__name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        float: left; }
   .sidebar .sidebar__groups .sidebar__groups__content {
     width: 100%;
     padding: 20px;
@@ -156,5 +170,11 @@ html {
     .sidebar .sidebar__groups .sidebar__groups__content .sidebar__groups__content__chat {
       font-size: 11px;
       color: #fff; }
+
+.sidebar__icon {
+  float: right;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 5px; }
 
 /*# sourceMappingURL=application.css.map */

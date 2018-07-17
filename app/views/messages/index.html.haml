@@ -1,7 +1,13 @@
 %div.content
   %div.sidebar
     %div.sidebar__user
-      %p test
+      %div.sidebar__user__content
+        %div.sidebar__user__content__name
+          ユーザー名
+        = link_to root_path, class: "sidebar__icon" do
+          = fa_icon 'cog'
+        = link_to root_path, class: "sidebar__icon" do
+          = fa_icon 'edit'
     %div.sidebar__groups
       %div.sidebar__groups__content
         %div.sidebar__groups__content__name

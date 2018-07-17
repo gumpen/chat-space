@@ -7,6 +7,19 @@
     height: $head-height;
     width: 100%;
     background-color: #253141;
+    .sidebar__user__content {
+      width: 100%;
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      .sidebar__user__content__name {
+        font-size: 16px;
+        font-weight: bold;
+        color: $sidebar-fontcolor;
+        float: left;
+      }
+    }
   }
   .sidebar__groups {
     .sidebar__groups__content {
@@ -15,13 +28,19 @@
       box-sizing: border-box;
       .sidebar__groups__content__name {
         font-size: 15px;
-        color: #fff;
+        color: $sidebar-fontcolor;
       }
       .sidebar__groups__content__chat {
         font-size: 11px;
-        color: #fff;
+        color: $sidebar-fontcolor;
       }
     }
   }
 
+}
+.sidebar__icon {
+  float: right;
+  color: $sidebar-fontcolor;
+  font-size: 16px;
+  margin-left: 5px;
 }
