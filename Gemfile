@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Haml
 gem 'haml-rails'
 
+# Use font-awesome
+gem 'font-awesome-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
