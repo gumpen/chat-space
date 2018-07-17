@@ -140,9 +140,49 @@ html {
   background-color: #AAAAAA;
   float: left; }
   .main__header {
-    height: 100px; }
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    background-color: #fff;
+    box-sizing: border-box; }
+    .main__header__group {
+      padding-top: 35px;
+      float: left; }
+      .main__header__group__name {
+        font-size: 20px;
+        color: #333; }
+      .main__header__group__members {
+        font-size: 12px;
+        color: #999; }
+    .main__header__editbutton {
+      height: 40px;
+      line-height: 40px;
+      border: solid 2px #38AEF0;
+      color: #38AEF0;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
+      float: right; }
   .main__content {
-    height: calc(100% - 100px - 90px); }
+    height: calc(100% - 100px - 90px);
+    padding: 6px 40px 0; }
+    .main__content__message {
+      padding-top: 40px; }
+      .main__content__message__upper {
+        float: left;
+        margin-bottom: 10px; }
+        .main__content__message__upper__name {
+          font-size: 16px;
+          color: #434A54;
+          font-weight: bold;
+          margin-right: 10px; }
+        .main__content__message__upper__datetime {
+          font-size: 12px;
+          color: #999; }
+      .main__content__message__text {
+        font-size: 16px;
+        color: #434A54;
+        clear: both; }
   .main__footer {
     height: 90px; }
 

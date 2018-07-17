@@ -26,5 +26,35 @@
           チャット内容３
   %div.main
     %div.main__header
+      %div.main__header__group
+        %div.main__header__group__name
+          テストグループ
+        %div.main__header__group__members
+          Members: test ichiro 田中義雄
+      = link_to "Edit", root_path, class: "main__header__editbutton"
     %div.main__content
+      %div.main__content__message
+        %div.main__content__message__upper
+          %span.main__content__message__upper__name
+            田中義雄
+          %span.main__content__message__upper__datetime
+            2018/07/17 08:09:08
+        %div.main__content__message__text
+          おはようございます。
+      %div.main__content__message
+        %div.main__content__message__upper
+          %span.main__content__message__upper__name
+            test
+          %span.main__content__message__upper__datetime
+            2018/07/17 10:09:08
+        %div.main__content__message__text
+          こんにちは。
+      %div.main__content__message
+        %div.main__content__message__upper
+          %span.main__content__message__upper__name
+            ichiro
+          %span.main__content__message__upper__datetime
+            2018/07/17 18:09:08
+        %div.main__content__message__text
+          こんばんは！
     %div.main__footer
