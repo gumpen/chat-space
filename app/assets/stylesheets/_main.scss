@@ -3,4 +3,13 @@
   width: calc(100vw - 300px);
   background-color: #AAAAAA;
   float: left;
+  &__header {
+    height: $head-height;
+  }
+  &__content {
+    height: calc(100% - #{$head-height} - #{$footer-height});
+  }
+  &__footer {
+    height: $footer-height;
+  }
 }
