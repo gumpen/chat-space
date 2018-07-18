@@ -1,34 +1,34 @@
-%div.notification
+.notification
   チャットグループが作成されました。
-%div.content
-  %div.sidebar
-    %div.sidebar__user
-      %div.sidebar__user__content
-        %div.sidebar__user__content__name
+.content
+  .sidebar
+    .sidebar__user
+      .sidebar__user__content
+        .sidebar__user__content__name
           ユーザー名
         = link_to "#", class: "sidebar__icon" do
           = fa_icon 'cog'
         = link_to "#", class: "sidebar__icon" do
           = fa_icon 'edit'
-    %div.sidebar__groups
+    .sidebar__groups
       -# グループ情報のダミーを挿入
       = render partial: "messages/group"
-  %div.main
-    %div.main__header
-      %div.main__header__group
-        %div.main__header__group__name
+  .main
+    .main__header
+      .main__header__group
+        .main__header__group__name
           テストグループ
-        %div.main__header__group__members
+        .main__header__group__members
           Members: test ichiro 田中義雄
       = link_to "Edit", "#", class: "main__header__editbutton"
-    %div.main__content
+    .main__content
       -# チャットのダミーを挿入
       = render partial: "messages/chat"
-    %div.main__footer
+    .main__footer
       %form{class: "main__footer__formarea",action:"/",method:"post"}
-        %div.main__footer__formarea__message
+        .main__footer__formarea__message
           %input{class: "main__footer__formarea__message__text",type: "text",placeholder: "type a message"}
-          %div.main__footer__formarea__message__icon
+          .main__footer__formarea__message__icon
             %label{class: "main__footer__formarea__message__icon__label", for:"icon__file"}
               = fa_icon 'picture-o', class: 'fa fa-image'
               %input{id: "icon__file",type: "file"}
