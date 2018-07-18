@@ -6,9 +6,9 @@
       %div.sidebar__user__content
         %div.sidebar__user__content__name
           ユーザー名
-        = link_to root_path, class: "sidebar__icon" do
+        = link_to "#", class: "sidebar__icon" do
           = fa_icon 'cog'
-        = link_to root_path, class: "sidebar__icon" do
+        = link_to "#", class: "sidebar__icon" do
           = fa_icon 'edit'
     %div.sidebar__groups
       -# グループ情報のダミーここから
@@ -35,7 +35,7 @@
           テストグループ
         %div.main__header__group__members
           Members: test ichiro 田中義雄
-      = link_to "Edit", root_path, class: "main__header__editbutton"
+      = link_to "Edit", "#", class: "main__header__editbutton"
     %div.main__content
       -# チャットのダミーここから
       %div.main__content__message
