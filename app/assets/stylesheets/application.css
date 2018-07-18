@@ -197,21 +197,26 @@ html {
     padding: 20px 40px;
     box-sizing: border-box; }
     .main__footer__formarea__message {
-      width: calc(100% - 150px);
+      position: relative;
+      width: calc(100% - 120px);
       height: 50px;
-      font-size: 16px;
-      color: #434a54;
-      float: left;
-      padding-left: 10px;
-      border: none; }
-    .main__footer__formarea__icon {
-      height: 50px;
-      float: left;
-      line-height: 50px;
-      background-color: #fff;
-      padding-right: 10px; }
-      .main__footer__formarea__icon__label #icon__file {
-        display: none; }
+      float: left; }
+      .main__footer__formarea__message__text {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        color: #434a54;
+        float: left;
+        padding-left: 10px;
+        border: none; }
+      .main__footer__formarea__message__icon {
+        height: 50px;
+        float: left;
+        line-height: 50px;
+        position: absolute;
+        right: 0; }
+        .main__footer__formarea__message__icon__label #icon__file {
+          display: none; }
     .main__footer__formarea__submit {
       background-color: #38AEF0;
       margin-left: 15px;
