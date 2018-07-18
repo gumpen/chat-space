@@ -11,23 +11,8 @@
         = link_to "#", class: "sidebar__icon" do
           = fa_icon 'edit'
     %div.sidebar__groups
-      -# グループ情報のダミーここから
-      %div.sidebar__groups__content
-        %div.sidebar__groups__content__name
-          グループ名１
-        %div.sidebar__groups__content__chat
-          チャット内容１
-      %div.sidebar__groups__content
-        %div.sidebar__groups__content__name
-          グループ名２
-        %div.sidebar__groups__content__chat
-          チャット内容２
-      %div.sidebar__groups__content
-        %div.sidebar__groups__content__name
-          グループ名３
-        %div.sidebar__groups__content__chat
-          チャット内容３
-      -# グループ情報のダミーここまで、処理を組む段階でテンプレート化する
+      -# グループ情報のダミーを挿入
+      = render partial: "messages/group"
   %div.main
     %div.main__header
       %div.main__header__group
@@ -37,32 +22,8 @@
           Members: test ichiro 田中義雄
       = link_to "Edit", "#", class: "main__header__editbutton"
     %div.main__content
-      -# チャットのダミーここから
-      %div.main__content__message
-        %div.main__content__message__upper
-          %span.main__content__message__upper__name
-            田中義雄
-          %span.main__content__message__upper__datetime
-            2018/07/17 08:09:08
-        %div.main__content__message__text
-          おはようございます。
-      %div.main__content__message
-        %div.main__content__message__upper
-          %span.main__content__message__upper__name
-            test
-          %span.main__content__message__upper__datetime
-            2018/07/17 10:09:08
-        %div.main__content__message__text
-          こんにちは。
-      %div.main__content__message
-        %div.main__content__message__upper
-          %span.main__content__message__upper__name
-            ichiro
-          %span.main__content__message__upper__datetime
-            2018/07/17 18:09:08
-        %div.main__content__message__text
-          こんばんは！
-      -# チャットのダミーここまで、処理を組む段階でテンプレート化する
+      -# チャットのダミーを挿入
+      = render partial: "messages/chat"
     %div.main__footer
       %form{class: "main__footer__formarea",action:"/",method:"post"}
         %div.main__footer__formarea__message
