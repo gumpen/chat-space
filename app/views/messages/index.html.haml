@@ -58,3 +58,10 @@
         %div.main__content__message__text
           こんばんは！
     %div.main__footer
+      %form{class: "main__footer__formarea",action:"/",method:"post"}
+        %input{class: "main__footer__formarea__message",type: "text",placeholder: "type a message"}
+        %div.main__footer__formarea__icon
+          %label{class: "main__footer__formarea__icon__label", for:"icon__file"}
+            = fa_icon 'picture-o', class: 'fa fa-image'
+            %input{id: "icon__file",type: "file"}
+        %input{class: "main__footer__formarea__submit",type: "submit",value: "Send"}

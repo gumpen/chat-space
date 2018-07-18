@@ -165,7 +165,8 @@ html {
       float: right; }
   .main__content {
     height: calc(100% - 100px - 90px);
-    padding: 6px 40px 0; }
+    padding: 6px 40px 0;
+    box-sizing: border-box; }
     .main__content__message {
       padding-top: 40px; }
       .main__content__message__upper {
@@ -184,7 +185,33 @@ html {
         color: #434A54;
         clear: both; }
   .main__footer {
-    height: 90px; }
+    height: 90px;
+    background-color: #ddd;
+    padding: 20px 40px;
+    box-sizing: border-box; }
+    .main__footer__formarea__message {
+      width: calc(100% - 150px);
+      height: 50px;
+      font-size: 16px;
+      color: #434a54;
+      float: left;
+      padding-left: 10px;
+      border: none; }
+    .main__footer__formarea__icon {
+      height: 50px;
+      float: left;
+      line-height: 50px;
+      background-color: #fff;
+      padding-right: 10px; }
+      .main__footer__formarea__icon__label #icon__file {
+        display: none; }
+    .main__footer__formarea__submit {
+      background-color: #38AEF0;
+      margin-left: 15px;
+      height: 50px;
+      padding: 0 25px;
+      float: right;
+      color: #fff; }
 
 .sidebar {
   height: 100%;
