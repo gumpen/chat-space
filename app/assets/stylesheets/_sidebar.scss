@@ -1,0 +1,46 @@
+.sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: #2f3e51;
+  float: left;
+  &__user {
+    height: $head-height;
+    width: 100%;
+    background-color: #253141;
+    &__content {
+      width: 100%;
+      line-height: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        color: $sidebar-fontcolor;
+        float: left;
+      }
+    }
+  }
+  &__groups {
+    &__content {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      &__name {
+        font-size: 15px;
+        color: $sidebar-fontcolor;
+      }
+      &__chat {
+        font-size: 11px;
+        color: $sidebar-fontcolor;
+      }
+    }
+  }
+
+}
+.sidebar__icon {
+  float: right;
+  color: $sidebar-fontcolor;
+  font-size: 16px;
+  margin-left: 5px;
+}

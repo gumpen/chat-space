@@ -1,0 +1,105 @@
+.main {
+  height: 100%;
+  width: calc(100vw - #{$sidebar-width});
+  background-color: #AAAAAA;
+  float: left;
+  &__header {
+    height: $head-height;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    background-color: $base-white;
+    box-sizing: border-box;
+    &__group {
+      padding-top: 35px;
+      float: left;
+      &__name {
+        font-size: 20px;
+        color: #333;
+      }
+      &__members {
+        font-size: 12px;
+        color: $gray-fontcolor;
+      }
+    }
+    &__editbutton {
+      height: 40px;
+      line-height: 40px;
+      border: solid 2px $base-blue;
+      color: $base-blue;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
+      float: right;
+    }
+  }
+  &__content {
+    height: calc(100% - #{$head-height} - #{$footer-height});
+    padding: 6px 40px 0;
+    box-sizing: border-box;
+    &__message {
+      padding-top: 40px;
+      &__upper {
+        float: left;
+        margin-bottom: 10px;
+        &__name {
+          font-size: 16px;
+          color: #434A54;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+        &__datetime {
+          font-size: 12px;
+          color: $gray-fontcolor;
+        }
+      }
+      &__text {
+        font-size: 16px;
+        color: #434A54;
+        clear: both;
+      }
+    }
+  }
+  &__footer {
+    height: $footer-height;
+    background-color: #ddd;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    &__formarea {
+      &__message {
+        position: relative;
+        width: calc(100% - 120px);
+        height: 50px;
+        float: left;
+        &__text {
+          width: 100%;
+          height: 50px;
+          font-size: 16px;
+          color: #434a54;
+          float: left;
+          padding-left:10px;
+          border: none;
+        }
+        &__icon {
+          height: 50px;
+          float: left;
+          line-height: 50px;
+          position: absolute;
+          right: 0;
+          &__label {
+            #icon__file {
+              display: none;
+            }
+          }
+        }
+      }
+      &__submit {
+        background-color: $base-blue;
+        margin-left: 15px;
+        height: 50px;
+        padding : 0 25px;
+        float: right;
+        color: $base-white;
+      }
+    }
+  }
+}
