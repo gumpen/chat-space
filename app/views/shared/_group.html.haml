@@ -1,0 +1,8 @@
+.sidebar__groups
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .sidebar__groups__content
+        .sidebar__groups__content__name
+          = group.name
+        .sidebar__groups__content__chat
+          メッセージはまだありません。
