@@ -23,11 +23,11 @@
       -# チャットのダミーを挿入
       = render partial: "messages/chat"
     .main__footer
-      %form{class: "main__footer__formarea",action:"/",method:"post"}
+      = form_for [@group,@message] do |f|
         .main__footer__formarea__message
-          %input{class: "main__footer__formarea__message__text",type: "text",placeholder: "type a message"}
+          = f.text_field :body, class: "main__footer__formarea__message__text", placeholder: "type a message"
           .main__footer__formarea__message__icon
-            %label{class: "main__footer__formarea__message__icon__label", for:"icon__file"}
+            = f.label :image,class: "main__footer__formarea__message__icon__label" do
               = fa_icon 'picture-o', class: 'fa fa-image'
-              %input{id: "icon__file",type: "file"}
-        %input{class: "main__footer__formarea__submit",type: "submit",value: "Send"}
+              = f.file_field :image, class: "icon__file"
+        = f.submit "Send", class: "main__footer__formarea__submit"
