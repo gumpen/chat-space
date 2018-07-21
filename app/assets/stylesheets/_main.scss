@@ -3,6 +3,7 @@
   width: calc(100vw - #{$sidebar-width});
   background-color: #AAAAAA;
   float: left;
+
   &__header {
     height: $head-height;
     padding: 0 40px;
@@ -36,10 +37,10 @@
     height: calc(100% - #{$head-height} - #{$footer-height});
     padding: 6px 40px 0;
     box-sizing: border-box;
+    overflow: scroll;
     &__message {
       padding-top: 40px;
       &__upper {
-        float: left;
         margin-bottom: 10px;
         &__name {
           font-size: 16px;
@@ -55,10 +56,8 @@
       &__text {
         font-size: 16px;
         color: #434A54;
-        clear: both;
       }
       &__image {
-
       }
     }
   }
