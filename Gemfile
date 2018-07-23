@@ -53,6 +53,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # To convert erb to haml
   gem 'erb2haml'
+
+  # Use for testing
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'faker'
 end
 
 group :development do
