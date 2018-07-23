@@ -23,7 +23,7 @@
       -# チャットのダミーを挿入
       = render partial: 'shared/message', collection: @messages
     .main__footer
-      = form_for [@group,@message] do |f|
+      = form_for [@group,@message], html:{id: "message_submit"} do |f|
         .main__footer__formarea__message
           = f.text_field :body, class: "main__footer__formarea__message__text", placeholder: "type a message"
           .main__footer__formarea__message__icon
