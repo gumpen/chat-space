@@ -3,13 +3,13 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var href = window.location.href;
+    $.ajax({
+      url: href,
+      type: 'POST',
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
   })
-  $.ajax({
-    url: href,
-    type: 'POST',
-    data: formData,
-    dataType: 'json',
-    processData: false,
-    contentType: false
-  })
-})
+
