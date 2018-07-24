@@ -17,9 +17,13 @@
         font-size: 20px;
         color: #333;
       }
-      &__members {
+      ul.main__header__group__members {
         font-size: 12px;
         color: $gray-fontcolor;
+        display: flex;
+        li.main__header__group__members__member{
+          padding-left: 6px;
+        }
       }
     }
     &__editbutton {
