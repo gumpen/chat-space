@@ -10,6 +10,16 @@ $(function(){
     `
     searchResult.append(html);
   }
+  function appendNoUser(str){
+    var searchResult = $("#user-search-result");
+    var html =
+    `
+    <div class="chat-group-user clearfix">
+      <p class="chat-group-user__name">${str}</p>
+    </div>
+    `
+    searchResult.append(html);
+  }
   $('.chat-group-form__input').on('keyup',function(){
     var input = $(this).val();
     $.ajax({
@@ -28,6 +38,9 @@ $(function(){
       else {
         appendNoUser("一致するユーザーは存在しません。");
       }
+    })
+    .fail(function(){
+        alert('ユーザー検索に失敗しました')
     })
   });
 });
