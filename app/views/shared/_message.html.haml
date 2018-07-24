@@ -3,7 +3,7 @@
     %span.main__content__message__upper__name
       = message.user.name
     %span.main__content__message__upper__datetime
-      = message.created_at.in_time_zone('Asia/Tokyo').strftime('%Y/%m/%d %H:%M:%S')
+      = message.created_at.to_s
   - if message.body.present?
     .main__content__message__text
       = message.body
