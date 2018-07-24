@@ -39,7 +39,6 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      debugger;
       $('.main__content').append(html);
       $('.main__footer__formarea__submit').prop('disabled', false);
       scroll()
