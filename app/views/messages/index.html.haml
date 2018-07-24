@@ -8,9 +8,8 @@
           = fa_icon 'cog'
         = link_to "groups/new", class: "sidebar__icon" do
           = fa_icon 'edit'
-    .sidebar__groups
-      -# グループ情報のダミーを挿入
-      = render partial: "shared/group"
+    / グループ情報を挿入
+    = render partial: "shared/group"
   .main
     .main__header
       .main__header__group
@@ -20,7 +19,7 @@
           Members: test ichiro 田中義雄
       = link_to "Edit", "#", class: "main__header__editbutton"
     .main__content
-      -# チャットのダミーを挿入
+      / チャット部分を挿入
       = render partial: 'shared/message', collection: @messages
     .main__footer
       = form_for [@group,@message] do |f|
