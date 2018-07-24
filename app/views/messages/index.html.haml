@@ -4,9 +4,9 @@
       .sidebar__user__content
         .sidebar__user__content__name
           = current_user.name
-        = link_to "users/:id/edit", class: "sidebar__icon" do
+        = link_to edit_user_url(current_user), class: "sidebar__icon" do
           = fa_icon 'cog'
-        = link_to "groups/new", class: "sidebar__icon" do
+        = link_to new_group_url, class: "sidebar__icon" do
           = fa_icon 'edit'
     / グループ情報を挿入
     = render partial: "shared/group"
