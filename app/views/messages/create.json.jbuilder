@@ -1,4 +1,4 @@
 json.user_name @message.user.name
-json.created_at @message.created_at.in_time_zone('Asia/Tokyo').strftime('%Y/%m/%d %H:%M:%S')
+json.created_at @message.created_at.to_s
 json.body @message.body
 json.image @message.image.url
