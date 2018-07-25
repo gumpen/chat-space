@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     var html =
     `
-    <div class="main__content__message">
+    <div class="main__content__message" data-message-id="${message.id}">
       <div class="main__content__message__upper">
         <span class="main__content__message__upper__name">
           ${message.user_name}
@@ -23,6 +23,30 @@ $(function(){
 
   function scroll(){
     $('.main__content').animate({scrollTop: $('.main__content')[0].scrollHeight},'fast')
+  }
+
+  function updateMessage(){
+    if (location.pathname.match(/\/groups\/\d+\/messages/)){
+      var lastMessageId = $('.main__content').find('.main__content__message').last().data('message-id');
+      $.ajax({
+        url: location.pathname,
+        type: "GET",
+        data: {"lastMessageId": lastMessageId},
+        dataType: 'json'
+      })
+      .done(function(messages){
+        if(messages.length !== 0){
+          messages.forEach(function(message){
+            var html = buildHTML(message);
+            $('.main__content').append(html);
+            scroll();
+          })
+        }
+      })
+      .fail(function(){
+        alert('自動更新に失敗しました')
+      })
+    }
   }
 
   $("#new_message").on("submit",function(e){
@@ -48,5 +72,7 @@ $(function(){
       alert('送信に失敗しました')
     })
   })
+
+  setInterval(updateMessage, 5000);
 })
 
