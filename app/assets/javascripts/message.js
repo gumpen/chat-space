@@ -28,7 +28,6 @@ $(function(){
   function updateMessage(){
     if (location.pathname.match(/\/groups\/\d+\/messages/)){
       var lastMessageId = $('.main__content').find('.main__content__message').last().data('message-id');
-      console.log(lastMessageId);
       $.ajax({
         url: location.pathname,
         type: "GET",
@@ -36,11 +35,9 @@ $(function(){
         dataType: 'json'
       })
       .done(function(messages){
-        console.log(messages);
         if(messages.length !== 0){
           messages.forEach(function(message){
             var html = buildHTML(message);
-            console.log(html);
             $('.main__content').append(html);
             scroll();
           })
