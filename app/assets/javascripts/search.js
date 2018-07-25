@@ -1,6 +1,7 @@
 $(function(){
   var searchResult = $("#user-search-result");
   var addedUsers = $("#chat-group-users");
+  var preWord;
   function appendUser(user){
     var html =
     `
@@ -34,26 +35,29 @@ $(function(){
   }
   $('#user-search-field').on('keyup',function(){
     var input = $(this).val();
-    $.ajax({
-      type: 'GET',
-      url: location.origin + '/users',
-      data: { keyword: input },
-      dataType: 'json'
-    })
-    .done(function(users){
-      $('#user-search-result').empty();
-      if(users.length !== 0){
-        users.forEach(function(user){
-          appendUser(user);
-        });
-      }
-      else {
-        appendNoUser("一致するユーザーは存在しません。");
-      }
-    })
-    .fail(function(){
+    if(input != preWord && input.length != 0){
+      $.ajax({
+        type: 'GET',
+        url: location.origin + '/users',
+        data: { keyword: input },
+        dataType: 'json'
+      })
+      .done(function(users){
+        $('#user-search-result').empty();
+        if(users.length !== 0){
+          users.forEach(function(user){
+            appendUser(user);
+          });
+        }
+        else {
+          appendNoUser("一致するユーザーは存在しません。");
+        }
+      })
+      .fail(function(){
         alert('ユーザー検索に失敗しました')
-    })
+      })
+    }
+    preWord = input;
   });
   $('#user-search-result').on('click','.user-search-add',function(){
     var name = $(this).data("user").name;
