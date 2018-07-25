@@ -32,7 +32,7 @@ $(function(){
     `
     addedUsers.append(html);
   }
-  $('.chat-group-form__input#user').on('keyup',function(){
+  $('#user-search-field').on('keyup',function(){
     var input = $(this).val();
     $.ajax({
       type: 'GET',
