@@ -25,6 +25,18 @@ $(function(){
     $('.main__content').animate({scrollTop: $('.main__content')[0].scrollHeight},'fast')
   }
 
+  function updateMessage(){
+    if (location.pathname.match(/\/groups\/\d+\/messages/)){
+      var lastMessageId = $('.main__content').find('.main__content__message').last().data('message-id');
+      $.ajax({
+        url: location.pathname,
+        type: "GET",
+        data: {"lastMessageId": lastMessageId},
+        dataType: 'json'
+      })
+    }
+  }
+
   $("#new_message").on("submit",function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -48,5 +60,7 @@ $(function(){
       alert('送信に失敗しました')
     })
   })
+
+  setInterval(updateMessage, 5000);
 })
 
