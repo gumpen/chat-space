@@ -34,6 +34,17 @@ $(function(){
         data: {"lastMessageId": lastMessageId},
         dataType: 'json'
       })
+      .done(messages){
+        if(messages.length !== 0){
+          messages.forEach(message){
+            var html = buildHTML;
+            $('.main__content').append(html);
+          }
+        }
+      }
+      .fail(function(){
+        alert('自動更新に失敗しました')
+      })
     }
   }
 
