@@ -21,3 +21,5 @@ public/uploads/*
 #sass
 /app/assets/stylesheets/.sass-cache/*
 /app/assets/stylesheets/application.css.map
+
+config/secrets.yml
