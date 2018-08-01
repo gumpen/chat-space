@@ -20,7 +20,7 @@
           - @group.users.each do |user|
             %li.main__header__group__members__member
               #{user.name}
-      = link_to "Edit", "#", class: "main__header__editbutton"
+      = link_to "Edit", edit_group_url(@group), class: "main__header__editbutton"
     .main__content
       / チャット部分を挿入
       = render partial: 'shared/message', collection: @messages
